@@ -14,5 +14,5 @@ install:
   - npm install
 
 script:
+  - git diff package-lock.json
   - cat package-lock.json
-  - git diff package-lock.json --exit-code
