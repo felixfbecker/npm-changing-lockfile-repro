@@ -4,10 +4,17 @@ This is a minimal reproduction case for https://npm.community/t/package-lock-jso
 The lockfile was generated on macOS by running `npm install chokidar`.
 
 The CI jobs are configured to run `npm install`, show a diff of the package-lock.json file, and print the whole contents of package-lock.json.
+If package-lock.json stayed the same, the build passes, otherwise it fails.
 
-CI shows that when running `npm install` against that lockfile on Linux, package-lock.json changes. On the macOS job, it stays the same.
+CI shows that when running `npm install` against that lockfile on Linux, package-lock.json changes (fail). On the macOS job, it stays the same (pass).
 
 https://travis-ci.org/felixfbecker/npm-changing-lockfile-repro
+
+
+Versions (latest at the time of writing):
+
+- npm: 6.4.0
+- node: 10.8.0
 
 Diff copied from CI:
 
