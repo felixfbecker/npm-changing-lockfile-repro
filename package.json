@@ -1,0 +1,6 @@
+{
+  "license": "MIT",
+  "dependencies": {
+    "chokidar": "^2.0.4"
+  }
+}
